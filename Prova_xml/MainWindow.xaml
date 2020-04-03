@@ -1,0 +1,43 @@
+﻿<Window x:Class="Prova_xml.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prova_xml"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF00FFDC" Offset="1"/>
+                <GradientStop Color="#FF006DF0" Offset="0.378"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="Btn_Aggiorna" Content="Visualizza dati" HorizontalAlignment="Left" Margin="359,33,0,0" VerticalAlignment="Top" Height="21" Width="421" Click="Btn_Aggiorna_Click" RenderTransformOrigin="0.5,0.5" Background="White">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.039"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ListBox x:Name="Lst_allenamenti" Margin="359,71,20,131" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" FontWeight="Bold" Visibility="Visible" SelectionChanged="Lst_allenamenti_SelectionChanged">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.437"/>
+                    <RotateTransform Angle="-0.155"/>
+                    <TranslateTransform Y="0.992"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Button x:Name="Btn_Stop" Content="Stop" HorizontalAlignment="Left" Margin="529,346,0,0" VerticalAlignment="Top" Height="27" Width="89" IsEnabled="False" Click="Btn_Stop_Click" Background="White"/>
+        <Label Content="Clicca per visualizzare la cronologia degli allenamenti --&gt;" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="338"/>
+        <Button x:Name="Btn_aggiorna" Content="Aggiorna" HorizontalAlignment="Left" Margin="79,0,0,0" VerticalAlignment="Center" Height="33" Width="100" Click="Btn_aggiorna_Click_1"/>
+        <Label x:Name="Lbl_Durata" Content="____" HorizontalAlignment="Left" Margin="79,121,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Txt_Tipo" HorizontalAlignment="Left" Margin="79,152,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="32"/>
+
+    </Grid>
+</Window>
